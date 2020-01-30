@@ -44,8 +44,13 @@
         prev[key] = value;
         return prev;
       }, {});
+      const firstURL = searchParams.doc_url || "http://localhost:3000/open/apidoc-json"
+      if (searchParams.doc_url == null) {
+        location.search = `?doc_url=${firstURL}`
+      }
+      
       const ui = SwaggerUIBundle({
-        url: searchParams.doc_url || "http://localhost:3000/open/apidoc-json",
+        url: firstURL,
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
@@ -57,6 +62,7 @@
         ],
         layout: "StandaloneLayout"
       })
+      
       // End Swagger UI call region
       window.ui = ui
       const input = document.getElementsByClassName("download-url-input")[0]
