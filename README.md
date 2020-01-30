@@ -1,3 +1,10 @@
+# スタマイズして仕様
+
+`/dist`配下をカスタマイズして使用中。
+swaggerの設定ファイルのURLをqueryで指定できるようにした。
+
+`?doc_url={URL}`で指定できる。
+
 # <img src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SWU-logo-clr.png" width="300">
 
 [![NPM version](https://badge.fury.io/js/swagger-ui.svg)](http://badge.fury.io/js/swagger-ui)
