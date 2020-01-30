@@ -58,8 +58,11 @@
         layout: "StandaloneLayout"
       })
       // End Swagger UI call region
-
       window.ui = ui
+      const input = document.getElementsByClassName("download-url-input")[0]
+      input.onchange = (e) => {
+        location.search = `?doc_url=${e.target.value}`
+      }
     }
   </script>
   </body>
